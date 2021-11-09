@@ -1,0 +1,80 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.12.27",
+  "planned_values": {
+    "root_module": {}
+  },
+  "resource_changes": [
+    {
+      "address": "aws_s3_bucket.b[0]",
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "b",
+      "provider_name": "aws",
+      "change": {
+        "actions": [
+          "delete",
+          "create"
+        ],
+        "before": {
+          "acceleration_status": ""
+        }
+      }
+    },
+    {
+      "address": "aws_test.test",
+      "mode": "managed",
+      "type": "aws_test",
+      "name": "test",
+      "provider_name": "aws",
+      "change": {
+        "actions": [
+          "delete"
+        ],
+        "before": {
+          "acceleration_status": ""
+        },
+        "after": null,
+        "after_unknown": {}
+      }
+    }
+  ],
+  "prior_state": {
+    "format_version": "0.1",
+    "terraform_version": "0.12.27",
+    "values": {
+      "root_module": {
+        "resources": [
+          {
+            "address": "aws_s3_bucket.b",
+            "mode": "managed",
+            "type": "aws_s3_bucket",
+            "name": "b",
+            "provider_name": "aws",
+            "schema_version": 0,
+            "values": {
+              "acceleration_status": ""
+            }
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "aws": {
+        "name": "aws",
+        "version_constraint": "~> 2.12",
+        "expressions": {
+          "profile": {
+            "constant_value": "test"
+          },
+          "region": {
+            "constant_value": "us-east-1"
+          }
+        }
+      }
+    },
+    "root_module": {}
+  }
+}

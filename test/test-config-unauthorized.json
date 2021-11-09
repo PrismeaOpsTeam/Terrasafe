@@ -1,0 +1,4 @@
+{
+  "ignore_deletion": [ "aws_*" ],
+  "unauthorized_deletion": [ "*" ]
+}
